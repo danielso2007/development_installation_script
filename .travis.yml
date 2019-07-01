@@ -1,0 +1,22 @@
+language: generic
+dist: xenial
+sudo: required
+addons:
+  apt:
+    packages:
+      - zsh
+    #  - ksh
+    #  - gcc-4.8
+    #  - g++-4.8
+cache:
+  ccache: true
+  directories:
+    - $TRAVIS_BUILD_DIR/.cache
+    - $TRAVIS_BUILD_DIR/node_modules
+before_install:
+  - $SHELL --version 2> /dev/null || dpkg -s $SHELL 2> /dev/null || which $SHELL
+  - curl --version
+  - wget --version
+  - shellcheck --version
+install:
+  - install_dev_script

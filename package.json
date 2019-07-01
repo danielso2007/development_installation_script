@@ -1,0 +1,21 @@
+{
+  "name": "development_installation_script",
+  "version": "0.0.0",
+  "description": "Development installation script",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielso2007/development_installation_script.git"
+  },
+  "author": "Daniel Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielso2007/development_installation_script/issues"
+  },
+  "homepage": "https://github.com/danielso2007/development_installation_script#readme",
+  "devDependencies": {
+    "standard-version": "^6.0.1"
+  }
+}
