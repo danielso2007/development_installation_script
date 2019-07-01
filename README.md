@@ -1,4 +1,6 @@
-# Development installation script [![Build Status](https://travis-ci.org/danielso2007/development_installation_script?branch=master)][3] [![nvm version](https://img.shields.io/badge/version-v0.0.0-yellow.svg)][4] [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/684/badge)](https://bestpractices.coreinfrastructure.org/projects/684)
+# Development installation script 
+
+[![Build Status](https://travis-ci.org/danielso2007/development_installation_script.svg?branch=master)](https://travis-ci.org/danielso2007/development_installation_script) ![GitHub repo size](https://img.shields.io/github/repo-size/danielso2007/development_installation_script.svg) ![GitHub All Releases](https://img.shields.io/github/downloads/danielso2007/development_installation_script/total.svg) ![GitHub issues](https://img.shields.io/github/issues/danielso2007/development_installation_script.svg) ![GitHub followers](https://img.shields.io/github/followers/danielso2007.svg) ![GitHub package.json version](https://img.shields.io/github/package-json/v/danielso2007/development_installation_script.svg?color=green) ![GitHub language count](https://img.shields.io/github/languages/count/danielso2007/development_installation_script.svg) ![GitHub top language](https://img.shields.io/github/languages/top/danielso2007/development_installation_script.svg)
 
 - [Installation](#installation)
 - [Complete installation](#complete-installation)
