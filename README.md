@@ -3,7 +3,7 @@
 - [Installation](#installation)
 - [Complete installation](#complete-installation)
 - [Individual installation](#individual-installation)
- - [Installing each tool](#installing-each-tool)
+  - [Installing each tool](#installing-each-tool)
 
 
 # Installation
