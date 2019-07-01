@@ -49,6 +49,8 @@ where:
           chrome      => O Google Chrome é um navegador de internet, desenvolvido pela companhia Google
           mongodb     => MongoDB is a new database idea bringing Document Oriented Database concepts
           compass     => The GUI for MongoDB. Visually explore your data. Run ad hoc queries in seconds
+          mysql       => MySQL is an open-source relational database that is free and widely used
+          workbench   => MySQL Workbench is a unified visual tool for database architects, developers, and DBAs
 "
 
 function OPEN_BROWSER() {
@@ -148,6 +150,52 @@ function POSTGRES() {
     OPEN_BROWSER $url_postgres_install
     echo -e "${Yellow}Install pgAdmin III...${NC}"
     sudo apt install -y pgadmin3
+}
+
+function WORKBENCH() {
+    sudo apt-get update
+    echo -e "${Yellow}Install Mysql-Workbench...${NC}"
+    sudo apt install mysql-workbench
+}
+
+function MYSQL() {
+    sudo apt-get update
+    echo -e "${Yellow}Install Mysql...${NC}"
+    sudo apt-get install mysql-server
+    while [ $valid ]; do
+        echo -e "${Light_Blue}Do you want to install mysql-client? (y)es or (n)o${NC}"
+        read value
+        if [[ -z "$value" ]]; then
+            echo -e "${RED}Please state (y)es or (n)o!"
+        else
+            break
+        fi
+    done
+    if [ "$value" = "y" ] || [ "$value" = "yes" ]; then
+        echo -e "${Yellow}Install mysql-client...${NC}"
+        sudo apt-get install mysql-client
+    fi
+    echo -e "${Green}After installation is complete, the mysql_secure_installation utility runs. This utility prompts you to define the mysql root password and other security related options, including removing remote access to the root user and setting the root password.${NC}"
+    echo -e "${Green}Allow remote access. Run the following command to allow remote access to the mysql server:${NC}"
+    echo -e "${Light_Blue}sudo ufw allow mysql${NC}"
+    echo -e "${Yellow}Start the MySQL service...${NC}"
+    sudo systemctl start mysql
+    while [ $valid ]; do
+        echo -e "${Light_Blue}Do you want to launch on reboot? (y)es or (n)o${NC}"
+        read value
+        if [[ -z "$value" ]]; then
+            echo -e "${RED}Please state (y)es or (n)o!"
+        else
+            break
+        fi
+    done
+    if [ "$value" = "y" ] || [ "$value" = "yes" ]; then
+        echo -e "${Yellow}Launch at reboot...${NC}"
+        sudo systemctl enable mysql
+    fi
+    OPEN_BROWSER 'https://support.rackspace.com/how-to/installing-mysql-server-on-ubuntu/'
+    echo -e "${Green}To reset the mysql root password, see the link:${NC}"
+    echo -e "${Light_Blue}https://linuxconfig.org/how-to-reset-root-mysql-password-on-ubuntu-18-04-bionic-beaver-linux${NC}"
 }
 
 function UBUNTU_MAKE() {
@@ -282,6 +330,8 @@ function ALL() {
         DOCKER_DOCKER_COMPOSE
         MONGODB
         MONGODB_COMPASS
+        MYSQL
+        WORKBENCH
         sudo apt -y autoremove
         echo -e "${Yellow}FIM.${NC}"
     else
@@ -314,6 +364,8 @@ if [ "$#" -eq 2 ]; then
             "docker") DOCKER_DOCKER_COMPOSE ;;
             "mongodb") MONGODB ;;
             "compass") MONGODB_COMPASS ;;
+            "mysql") MYSQL ;;
+            "workbench") WORKBENCH ;;
             *) echo "Invalid Option!" ;;
             esac
             ;;

@@ -13,6 +13,15 @@
 Script used for basic tool installations for a development environment.
 It is an installation for Java and / or Android developments.
 Clone this repository and run the commands below.
+It is important that your user ($ USER) has read and write access to the / opt directory. Otherwise, perform the following steps:
+```shell
+sudo chown $ {USER}:"REPORT GROUP" /opt -R
+```
+Then permission on the subfolders:
+```shell
+sudo chmod 2770 /opt/ -R
+```
+- Please, if you have a better solution, please report me your solution.
 
 # Complete installation
 
