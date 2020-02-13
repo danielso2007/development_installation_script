@@ -1,9 +1,26 @@
 name: CI Install Curl Wget and Dbeaver
 
-on: [push]
+on:
+  # Acione o fluxo de trabalho na solicitação push ou pull,
+  # mas apenas para a ramificação principal.
+  push:
+    branches:
+    - master
+    - develop
+    tags:        
+    - v*
+    paths-ignore:
+    - '**.md'
+    - '**.sh'
+    - '**.json'
+  pull_request:
+    branches:
+    - master
+    tags:        
+    - v*
 
 jobs:
-  build:
+  Test:
 
     runs-on: ubuntu-latest
 
