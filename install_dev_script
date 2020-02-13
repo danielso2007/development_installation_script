@@ -19,7 +19,7 @@ NC='\033[0m' # No Color
 valid=true
 toolbox_version=1.16.6319
 java_version=13.0.2.j9-adpt
-mongo_version=4.0.10
+mongo_version=1804-4.2.3
 mongo_compass_version=1.18.0
 destination_directory=/opt
 eclipse_jee_dir=/opt/eclipse-jee
@@ -253,17 +253,17 @@ function CHROME() {
 
 function MONGODB() {
     echo -e "${Yellow}Install mongodb...${NC}"
-    file=${destination_directory}/mongodb-linux-x86_64-ubuntu1604-${mongo_version}.tgz
+    file=${destination_directory}/mongodb-linux-x86_64-ubuntu${mongo_version}.tgz
     if [ ! -f "$file" ]; then
         echo -e "${Yellow}File Download ${file}...${NC}"
-        wget -c -P ${destination_directory} https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-${mongo_version}.tgz
+        wget -c -P ${destination_directory} https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu${mongo_version}.tgz
     fi
     mongo_dir=${destination_directory}/mongodb
     echo -e "${Yellow}Uncompressing file ${file} in ${mongo_dir}...${NC}"
     tar -xf ${file} -C ${destination_directory}
     if [ ! -d ${mongo_dir} ]; then
         echo -e "${Yellow}Renaming directory to ${mongo_dir}${NC}"
-        mv ${destination_directory}/mongodb-linux-x86_64-ubuntu1604-${mongo_version} ${mongo_dir}
+        mv ${destination_directory}/mongodb-linux-x86_64-ubuntu${mongo_version} ${mongo_dir}
     fi
     echo -e "${Yellow}Creating MONGODB_HOME=${mongo_dir} in ~/.bashrc...${NC}"
     echo "export MONGODB_HOME=${mongo_dir}:$MONGODB_HOME" >>~/.bashrc
