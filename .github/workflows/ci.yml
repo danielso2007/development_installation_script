@@ -1,4 +1,4 @@
-name: CI Install Curl Wget and Dbeaver
+name: CI Github Test
 
 on:
   # Acione o fluxo de trabalho na solicitação push ou pull,

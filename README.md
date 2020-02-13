@@ -1,5 +1,5 @@
 # Development installation script 
-
+![CI Install Curl Wget and Dbeaver](https://github.com/danielso2007/development_installation_script/workflows/CI%20Install%20Curl%20Wget%20and%20Dbeaver/badge.svg)
 [![Build Status](https://travis-ci.org/danielso2007/development_installation_script.svg?branch=master)](https://travis-ci.org/danielso2007/development_installation_script) ![GitHub repo size](https://img.shields.io/github/repo-size/danielso2007/development_installation_script.svg) ![GitHub All Releases](https://img.shields.io/github/downloads/danielso2007/development_installation_script/total.svg) ![GitHub issues](https://img.shields.io/github/issues/danielso2007/development_installation_script.svg) ![GitHub followers](https://img.shields.io/github/followers/danielso2007.svg) ![GitHub package.json version](https://img.shields.io/github/package-json/v/danielso2007/development_installation_script.svg?color=green) ![GitHub language count](https://img.shields.io/github/languages/count/danielso2007/development_installation_script.svg) ![GitHub top language](https://img.shields.io/github/languages/top/danielso2007/development_installation_script.svg)
 
 - [Installation](#installation)
