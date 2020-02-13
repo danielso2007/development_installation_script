@@ -25,7 +25,6 @@ destination_directory=/opt
 eclipse_jee_dir=/opt/eclipse-jee
 spring_tools_suite_dir=/opt/spring-tools-suite
 url_postgres_install=http://yallalabs.com/linux/how-to-install-and-use-postgresql-10-on-ubuntu-16-04/
-
 usage="Script to install the main JAVA and Android development tools.
 
 Usage:
