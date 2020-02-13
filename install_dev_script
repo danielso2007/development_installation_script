@@ -18,7 +18,7 @@ White='\033[1;37m'
 NC='\033[0m' # No Color
 valid=true
 toolbox_version=1.15.5387
-java_version=8.0.212-zulu
+java_version=13.0.2.j9-adpt
 mongo_version=4.0.10
 mongo_compass_version=1.18.0
 destination_directory=/opt
@@ -107,7 +107,7 @@ function SDKMAN_AND_MAVEN() {
     sdk selfupdate force
     source "$HOME/.sdkman/bin/sdkman-init.sh"
     sdk version
-    echo -e "${Yellow}Installing JAVA 8 (${java_version})...${NC}"
+    echo -e "${Yellow}Installing 13 (${java_version})...${NC}"
     sdk install java ${java_version}
     echo -e "${Yellow}Setting Java ${java_version} as the default...${NC}"
     sdk default java ${java_version}
