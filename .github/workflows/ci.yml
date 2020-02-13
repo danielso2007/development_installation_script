@@ -16,7 +16,7 @@ jobs:
     - name: Teste de instalação do WGET
       run: |
         bash install_dev_script -i wget
-        wget -c -P https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+        wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
     - name: Teste de instalação do DBeaver
       run: |
         bash install_dev_script -i dbeaver
