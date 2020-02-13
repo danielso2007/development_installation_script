@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/danielso2007/development_installation_script/compare/v1.1.0...v1.2.0) (2020-02-13)
+
+
+### Features
+
+* Atualização do jetbrains-toolbox  para 1.16.6319. ([d835c34](https://github.com/danielso2007/development_installation_script/commit/d835c34))
+* Atualização do MongoDB Compass 1.20.5. ([820fa7a](https://github.com/danielso2007/development_installation_script/commit/820fa7a))
+* Atualização do MongoDB server 1804-4.2.3. ([9c7b270](https://github.com/danielso2007/development_installation_script/commit/9c7b270))
+* Atualização do Node Version Manager para 0.35.2. ([3b49bca](https://github.com/danielso2007/development_installation_script/commit/3b49bca))
+* Atualizando instalação do java para 13.0.2.j9-adpt. ([129f00f](https://github.com/danielso2007/development_installation_script/commit/129f00f))
+* Instalação do DBeaver Free multi-platform database tool for developers. ([6964c1e](https://github.com/danielso2007/development_installation_script/commit/6964c1e))
+
+
+
 ## [1.1.0](https://github.com/danielso2007/development_installation_script/compare/v1.0.0...v1.1.0) (2019-07-01)
 
 
