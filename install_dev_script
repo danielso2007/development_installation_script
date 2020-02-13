@@ -41,6 +41,7 @@ where:
           yvm         => Yarn Version Manager
           sdk         => SDKMAN! is a tool for managing parallel versions of multiple Software Development Kits on most Unix based systems
           toolbox     => A control panel for your tools and projects (Jetbrains)
+          dbeaver     => Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases
           postgres    => PostgreSQL is a powerful, open source object-relational database system ( ORDBMS )
           umake       => Ubuntu Make is a command line tool which allows you to download the latest version of popular developer tools
           eclipse-jee => Installing eclipse jee by umake
@@ -300,6 +301,16 @@ function MONGODB_COMPASS() {
     sudo dpkg -i ${file}
 }
 
+function DBEAVER() {
+    echo -e "${Yellow}Install DBeaver Community...${NC}"
+    file=${destination_directory}/dbeaver-ce_latest_amd64.deb
+    if [ ! -f "$file" ]; then
+        echo -e "${Yellow}File Download ${file}...${NC}"
+        wget -c -P ${destination_directory} https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+    fi
+    sudo dpkg -i ${file}
+}
+
 function ALL() {
     while [ $valid ]; do
         echo -e "${Light_Blue}Do you want to install all the tools? (y)es or (n)o${NC}"
@@ -323,6 +334,7 @@ function ALL() {
         UBUNTU_MAKE
         UMAKE_IDE_ECLIPSE_JEE
         UMAKE_IDE_SPRING_TOOLS_SUITE
+        DBEAVER
         POSTGRES
         JETBRAINS_TOOLBOx_APP
         VSCODE
@@ -355,6 +367,7 @@ if [ "$#" -eq 2 ]; then
             "yvm") YVM ;;
             "sdk") SDKMAN_AND_MAVEN ;;
             "toolbox") JETBRAINS_TOOLBOx_APP ;;
+            "dbeaver") DBEAVER ;;
             "postgres") POSTGRES ;;
             "umake") UBUNTU_MAKE ;;
             "eclipse-jee") UBUNTU_MAKE ;;
