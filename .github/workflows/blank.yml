@@ -1,0 +1,23 @@
+name: CI Install Curl Wget and Dbeaver
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Teste de instalação do CURL
+      run: |
+        bash install_dev_script -i curl
+        curl -L "http://downloads.sourceforge.net/shunit2/shunit2-2.0.3.tgz" | tar zx
+    - name: Teste de instalação do WGET
+      run: |
+        bash install_dev_script -i wget
+        wget -c -P https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+    - name: Teste de instalação do DBeaver
+      run: |
+        bash install_dev_script -i dbeaver
+
