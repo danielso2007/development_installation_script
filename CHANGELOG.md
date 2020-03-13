@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/danielso2007/development_installation_script/compare/v1.2.0...v1.3.0) (2020-03-13)
+
+
+### Features
+
+* Adicionado o CI do github. ([a7f21fc](https://github.com/danielso2007/development_installation_script/commit/a7f21fc))
+* Adjusting the DBeaver installation ([#1](https://github.com/danielso2007/development_installation_script/issues/1)). ([4dc3308](https://github.com/danielso2007/development_installation_script/commit/4dc3308))
+
+
+
 ## [1.2.0](https://github.com/danielso2007/development_installation_script/compare/v1.1.0...v1.2.0) (2020-02-13)
 
 
