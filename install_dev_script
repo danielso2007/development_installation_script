@@ -302,12 +302,11 @@ function MONGODB_COMPASS() {
 
 function DBEAVER() {
     echo -e "${Yellow}Install DBeaver Community...${NC}"
-    file=${destination_directory}/dbeaver-ce_latest_amd64.deb
-    if [ ! -f "$file" ]; then
-        echo -e "${Yellow}File Download ${file}...${NC}"
-        wget -c -P ${destination_directory} https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
-    fi
-    sudo dpkg -i ${file}
+    wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
+    echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
+    sudo apt update
+    sudo apt -y  install dbeaver-ce
+    apt policy  dbeaver-ce
 }
 
 function ALL() {
