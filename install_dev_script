@@ -368,8 +368,8 @@ if [ "$#" -eq 2 ]; then
             "dbeaver") DBEAVER ;;
             "postgres") POSTGRES ;;
             "umake") UBUNTU_MAKE ;;
-            "eclipse-jee") UBUNTU_MAKE ;;
-            "sts") UBUNTU_MAKE ;;
+            "eclipse-jee") UMAKE_IDE_ECLIPSE_JEE ;;
+            "sts") UMAKE_IDE_SPRING_TOOLS_SUITE ;;
             "vscode") VSCODE ;;
             "chrome") CHROME ;;
             "docker") DOCKER_DOCKER_COMPOSE ;;
