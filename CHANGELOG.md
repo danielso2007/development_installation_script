@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/danielso2007/development_installation_script/compare/v1.4.0...v1.4.1) (2020-11-29)
+
+
+### Features
+
+* atualização do standard-version para o 9.0. ([cb3d472](https://github.com/danielso2007/development_installation_script/commit/cb3d472b344e70dbe0e6e91fe9442dca11edb151))
+
+## [1.4.0](https://github.com/danielso2007/development_installation_script/compare/v1.3.0...v1.4.0) (2020-11-29)
+
+
+### Features
+
+* Atualização das versões de cada aplicação. ([e5f3dd6](https://github.com/danielso2007/development_installation_script/commit/e5f3dd69fc021e53b139ea2473ea8a21d01a65b1))
+
+
+### Bug Fixes
+
+* As instalações individuais do Eclipse e STS estavam erradas. ([d9fb799](https://github.com/danielso2007/development_installation_script/commit/d9fb799ebfef2f01aa3fde63506d4cdd6e5be37b))
+
 ## [1.3.0](https://github.com/danielso2007/development_installation_script/compare/v1.2.0...v1.3.0) (2020-03-13)
 
 

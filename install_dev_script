@@ -17,9 +17,9 @@ Light_Gray='\033[0;37m'
 White='\033[1;37m'
 NC='\033[0m' # No Color
 valid=true
-toolbox_version=1.16.6319
+toolbox_version=1.18.7609
 java_version=13.0.2.j9-adpt
-mongo_version=1804-4.2.3
+mongo_version=4.4.2
 mongo_compass_version=1.20.5
 destination_directory=/opt
 eclipse_jee_dir=/opt/eclipse-jee
@@ -38,6 +38,7 @@ where:
           wget        => Wget command is a Linux command line utility that helps us to download the files from the web
           nvm         => Node Version Manager
           yvm         => Yarn Version Manager
+          docker      => Installing the docker and docker-compose
           sdk         => SDKMAN! is a tool for managing parallel versions of multiple Software Development Kits on most Unix based systems
           toolbox     => A control panel for your tools and projects (Jetbrains)
           dbeaver     => Free multi-platform database tool for developers, database administrators, analysts and all people who need to work with databases
@@ -74,7 +75,7 @@ function WGET() {
 function NVM() {
     echo -e "${Yellow}Node Version Manager${NC}"
     echo -e "${Yellow}Installing NVM (https://github.com/nvm-sh/nvm)...${NC}"
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
     echo -e "${Yellow}Executes commands from a file in the current shell.${NC}"
     source ~/.bashrc
     export NVM_DIR="$HOME/.nvm"
@@ -236,7 +237,7 @@ function DOCKER_DOCKER_COMPOSE() {
     sudo addgroup --system docker &
     sudo adduser $USER docker &
     echo -e "${Yellow}Install Docker Compose on Ubuntu...${NC}"
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     sudo chmod +x /usr/local/bin/docker-compose
     docker-compose --version
 }
@@ -256,7 +257,7 @@ function MONGODB() {
     file=${destination_directory}/mongodb-linux-x86_64-ubuntu${mongo_version}.tgz
     if [ ! -f "$file" ]; then
         echo -e "${Yellow}File Download ${file}...${NC}"
-        wget -c -P ${destination_directory} https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu${mongo_version}.tgz
+        wget -c -P ${destination_directory} https://fastdl.mongodb.org/linux/mongodb-linux-aarch64-ubuntu2004-${mongo_version}.tgz
     fi
     mongo_dir=${destination_directory}/mongodb
     echo -e "${Yellow}Uncompressing file ${file} in ${mongo_dir}...${NC}"
@@ -368,8 +369,8 @@ if [ "$#" -eq 2 ]; then
             "dbeaver") DBEAVER ;;
             "postgres") POSTGRES ;;
             "umake") UBUNTU_MAKE ;;
-            "eclipse-jee") UBUNTU_MAKE ;;
-            "sts") UBUNTU_MAKE ;;
+            "eclipse-jee") UMAKE_IDE_ECLIPSE_JEE ;;
+            "sts") UMAKE_IDE_SPRING_TOOLS_SUITE ;;
             "vscode") VSCODE ;;
             "chrome") CHROME ;;
             "docker") DOCKER_DOCKER_COMPOSE ;;
