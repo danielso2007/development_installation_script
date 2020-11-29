@@ -1,6 +1,6 @@
 {
   "name": "development_installation_script",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Development installation script",
   "scripts": {
     "release": "standard-version"
