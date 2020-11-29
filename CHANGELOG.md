@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/danielso2007/development_installation_script/compare/v1.4.0...v1.4.1) (2020-11-29)
+
+
+### Features
+
+* atualização do standard-version para o 9.0. ([cb3d472](https://github.com/danielso2007/development_installation_script/commit/cb3d472b344e70dbe0e6e91fe9442dca11edb151))
+
 ## [1.4.0](https://github.com/danielso2007/development_installation_script/compare/v1.3.0...v1.4.0) (2020-11-29)
 
 
