@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/danielso2007/development_installation_script/compare/v1.4.1...v1.5.0) (2021-07-27)
+
+
+### Features
+
+* atualização do Node Version Manager 0.38.0 ([999bce4](https://github.com/danielso2007/development_installation_script/commit/999bce40de3914a2582732a2d2c69224313fe593))
+* first commit ([394204b](https://github.com/danielso2007/development_installation_script/commit/394204b6369d21b29792e5f15882d6a15fec0aa3))
+
 ### [1.4.1](https://github.com/danielso2007/development_installation_script/compare/v1.4.0...v1.4.1) (2020-11-29)
 
 
