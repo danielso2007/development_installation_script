@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/danielso2007/development_installation_script/compare/v1.5.0...v1.6.0) (2022-03-07)
+
+
+### Features
+
+* Atualização do nvm para a versão v0.39.1 ([75d7e2e](https://github.com/danielso2007/development_installation_script/commit/75d7e2e34325f85e3eb935192882eaa2db0b288c))
+
 ## [1.5.0](https://github.com/danielso2007/development_installation_script/compare/v1.4.1...v1.5.0) (2021-07-27)
 
 
