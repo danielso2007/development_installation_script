@@ -75,7 +75,7 @@ function WGET() {
 function NVM() {
     echo -e "${Yellow}Node Version Manager${NC}"
     echo -e "${Yellow}Installing NVM (https://github.com/nvm-sh/nvm)...${NC}"
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     echo -e "${Yellow}Executes commands from a file in the current shell.${NC}"
     source ~/.bashrc
     export NVM_DIR="$HOME/.nvm"
