@@ -17,7 +17,9 @@ Light_Gray='\033[0;37m'
 White='\033[1;37m'
 NC='\033[0m' # No Color
 valid=true
-toolbox_version=1.18.7609
+nvm_version=0.39.1
+toolbox_version=1.22.10970
+docker_composer_version=2.3.4
 java_version=13.0.2.j9-adpt
 mongo_version=4.4.2
 mongo_compass_version=1.20.5
@@ -34,6 +36,7 @@ where:
     -h  show help text
     -i  install the tools individually
         n:
+          tilix       => Tilix é um emulador de terminal de ladrilhos GTK3 avançado que segue as Diretrizes de Interface Humana do Gnome.
           curl        => Curl is a tool to transfer data from or to a server
           wget        => Wget command is a Linux command line utility that helps us to download the files from the web
           nvm         => Node Version Manager
@@ -75,7 +78,7 @@ function WGET() {
 function NVM() {
     echo -e "${Yellow}Node Version Manager${NC}"
     echo -e "${Yellow}Installing NVM (https://github.com/nvm-sh/nvm)...${NC}"
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v${nvm_version}/install.sh | bash
     echo -e "${Yellow}Executes commands from a file in the current shell.${NC}"
     source ~/.bashrc
     export NVM_DIR="$HOME/.nvm"
@@ -237,7 +240,7 @@ function DOCKER_DOCKER_COMPOSE() {
     sudo addgroup --system docker &
     sudo adduser $USER docker &
     echo -e "${Yellow}Install Docker Compose on Ubuntu...${NC}"
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    sudo curl -L "https://github.com/docker/compose/releases/download/v${docker_composer_version}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     sudo chmod +x /usr/local/bin/docker-compose
     docker-compose --version
 }
@@ -310,6 +313,16 @@ function DBEAVER() {
     apt policy  dbeaver-ce
 }
 
+function TILIX() {
+    echo -e "${Yellow}Install Tilix...${NC}"
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get install software-properties-common -y
+    sudo add-apt-repository ppa:webupd8team/terminix -y
+    sudo apt-get update -y
+    sudo apt install tilix
+}
+
 function ALL() {
     while [ $valid ]; do
         echo -e "${Light_Blue}Do you want to install all the tools? (y)es or (n)o${NC}"
@@ -343,6 +356,7 @@ function ALL() {
         MONGODB_COMPASS
         MYSQL
         WORKBENCH
+        TILIX
         sudo apt -y autoremove
         echo -e "${Yellow}FIM.${NC}"
     else
@@ -378,6 +392,7 @@ if [ "$#" -eq 2 ]; then
             "compass") MONGODB_COMPASS ;;
             "mysql") MYSQL ;;
             "workbench") WORKBENCH ;;
+            "tilix") TILIX ;;
             *) echo "Invalid Option!" ;;
             esac
             ;;
